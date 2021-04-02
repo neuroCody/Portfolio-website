@@ -1,63 +1,51 @@
-import React from 'react';
-import { Parallax } from 'react-parallax';
-import Sun from './bgSun.png';
+import React, {useState, useEffect} from 'react';
+import './App.scss';
 
-const inlinestyle = {
-  background: '#fff',
-  left: '50%',
-  top: '50%',
-  position: 'absolute',
-  padding: '20px',
-  transform: 'translate(-50%, -50%)',
-}
 
 function App() {
+
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <div className="App" style={{ textAlign: 'center' }}>
-      <Parallax bgImage="/assets/images/SiteBG1.jpg" bgImageAlt="first BG">
-        <div style = {{height: 850}}>
-          <div style={inlinestyle}> HTML inside the parallax</div>
-        </div>
-      </Parallax>
-      <h1>| | |</h1>
-      <Parallax bgImage="/assets/images/SiteBG2.jpg" bgImageAlt="second BG" blur={{ min: -1, max: 3 }}>
-        <div style = {{height: 850}}>
-          <div style={inlinestyle}>Dynamic Blur</div>
-        </div>
-      </Parallax>
-      <h1>| | |</h1>
-      <Parallax bgImage="/assets/images/bgStars.jpg" bgImageAlt="third BG" strength={-200}>
-        <div style = {{height: 850}}>
-          <div style={inlinestyle}>Reverse Direction</div>
-        </div>
-      </Parallax>
-      <h1>| | |</h1>
-      <Parallax 
-        bgImage="/assets/images/SiteBG1.jpg" 
-        bgImageAlt="third BG" 
-        strength={200}
-        renderLayer={percentage => (
-          <div 
-          style={{ 
-            width: '37%',
-            height: '590px',
-            position: 'absolute',
-            backgroundImage: "url("+ Sun + ")",
-            left: '50%',
-            top: '30%',
-            transform: `translate(-50%, -50%) scale(${percentage + 2})`,
-            opacity: '0.9',
-           }}>
-           {console.log(percentage)}
-          </div>
-        )}
-      >
-        <div style = {{height: 850}}>
-          <div style={inlinestyle}>Render Prop</div>
-        </div>
-      </Parallax>
-      <div style={{height: '100vh' }}></div>
+    <>
+    <div className="parallax">
+      <div className="parallax_layer parallax Stars" ></div>
+
+      <div className="parallax_layer parallax Sun" style={{ transform: `translateY(-${offsetY * 0.0}px)` }}></div>
+
+      <div className="parallax_layer parallax firstRange" style={{ transform: `translateY(${offsetY * 0.1}px)`}}></div>
+
+      <div className="parallax_layer parallax secondRange" style={{ transform: `translateY(${offsetY * 0.15}px)`}}> </div>
+
+      <div className="parallax_layer parallax finalRange" style={{ transform: `translateY(${offsetY * 0.2}px)`}}></div>
+
     </div>
+    <div className="main_container">
+      <div className="row">
+          <div className="col">
+              <h1>This is some words</h1>
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div className="col">
+              <h2>more words</h2>
+          </div>
+        </div>
+    </div>
+    </>
   )
 }
 

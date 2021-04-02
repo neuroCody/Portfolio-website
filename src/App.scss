@@ -1,94 +1,85 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .Parallax {
-    display: flex;
-    justify-content: center;
-  
-    &__background
-    {
-      width: 100vw;
-      height: 1280px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: fixed;
 
-    }
-  
-    &__background {
-      background-image: url("./bgStars.jpg");
-    }
 
-    &__background-sun {
-      width: 50vw;
-      height: 500px;
-      margin: auto;
-      background-repeat: no-repeat;
-      background-position:top ;
-    }
-  
-    &__background-sun {
-      background-image: url("./bgSun.png");
-    }
+.parallax {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+}
 
-    &__background-grid {
-      padding-left: 500px;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-position: bottom;
-      
-    }
+.parallax, .parallax_layer {
+  height: 1000px;
+}
 
-    &__background-grid {
-      background-image: url("./bgGrid.png");
-    }
+.parallax_layer.parallax {
+position: absolute;
+}
+
+.parallax_layer {
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.Stars {
+  background-image: url(./bgStars.jpg);
+}
+
+.parallax_layer.Stars {
+  height: 1000px;
+  background-size: auto 1300px;
+  background-position: center bottom;
+}
+
+.Sun {
+  background-image: url(./bgSun.png);
+}
+
+.parallax_layer.Sun {
+  background-size: auto 500px;
+  background-position: center center;
+}
+
+.firstRange {
+  background-image: url(./bgZion2.png);
+}
+
+.parallax_layer.firstRange {
+  background-size: auto 1000px;
+  background-position: right bottom;
   
-    &__content {
-      width: 1080px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      z-index: 1;
-      margin-top: 100px;
-  
-      &__heading,
-      &__cta {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-      }
-  
-      &__heading {
-        background-color: #fff;
-        width: 40%;
-        padding: 40px;
-  
-        &__text {
-          margin: 10px 0;
-          font-size: 60px;
-        }
-  
-        &__caption {
-          margin: 0;
-          font-size: 20px;
-        }
-      }
-  
-      &__cta {
-        background-color: #ff737e;
-        width: 60%;
-        padding: 40px;
-  
-        font-size: 20px;
-        color: #fff;
-  
-        margin-top: 120px;
-      }
-    }
-  }
+}
+
+.secondRange {
+  background-image: url(./bgZion1.png);
+}
+
+.parallax_layer.secondRange {
+  background-size: auto 1000px;
+  background-position: left bottom; 
+  padding-left: 300px;
+}
+
+
+
+.finalRange {
+  background-image: url(./bgZion4.png);
+}
+
+.parallax_layer.finalRange {
+  background-size: auto 1120px;
+  background-position: left bottom;
+  padding-top: 0px;
+  padding-left: 300px;
+}
+
+.main_container {
+  position: relative;
+  z-index: 98;
+  background-color: rgb(2, 0, 0);
+}
+
+element.style {
+  transform: translate3d(0px, 0px, 0px);
+}
