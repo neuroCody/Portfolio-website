@@ -32,47 +32,48 @@ position: absolute;
   background-position: center bottom;
 }
 
-.Sun {
-  background-image: url(./bgSun.png);
+.Mtn1 {
+  background-image: url(./imgbin_mountain-polygon-euclidean-png.png);
 }
 
-.parallax_layer.Sun {
-  background-size: auto 500px;
-  background-position: center center;
-}
-
-.firstRange {
-  background-image: url(./bgZion2.png);
-}
-
-.parallax_layer.firstRange {
+.parallax_layer.Mtn1 {
   background-size: auto 1000px;
-  background-position: right bottom;
+  background-position: bottom center;
+}
+
+.Fog1 {
+  background-image: url(./Fog1.png);
+}
+
+.parallax_layer.Fog1 {
+
+  opacity: 70%;
+  background-size: auto 2000px;
+  background-position: bottom center;
+  padding-top: 1000px;
   
 }
 
-.secondRange {
-  background-image: url(./bgZion1.png);
-}
+// .Circle2 {
+//   background-image: url(./Circle2.png);
+// }
 
-.parallax_layer.secondRange {
-  background-size: auto 1000px;
-  background-position: left bottom; 
-  padding-left: 300px;
-}
+// .parallax_layer.Circle2 {
+//   background-size: auto 600px;
+//   background-position: bottom center; 
+
+// }
 
 
 
-.finalRange {
-  background-image: url(./bgZion4.png);
-}
+// .Circle1 {
+//   background-image: url(./Circle1.png);
+// }
 
-.parallax_layer.finalRange {
-  background-size: auto 1120px;
-  background-position: left bottom;
-  padding-top: 0px;
-  padding-left: 300px;
-}
+// .parallax_layer.Circle1 {
+//   background-size: auto 400px;
+//   background-position: bottom center;
+// }
 
 .main_container {
   position: relative;

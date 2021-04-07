@@ -19,16 +19,18 @@ function App() {
     <div className="parallax">
       <div className="parallax_layer parallax Stars" ></div>
 
-      <div className="parallax_layer parallax Sun" style={{ transform: `translateY(-${offsetY * 0.0}px)` }}></div>
+      <div className="parallax_layer parallax Mtn1" style={{ transform: `translateY(${offsetY * 0.0}px)` }}></div>
 
-      <div className="parallax_layer parallax firstRange" style={{ transform: `translateY(${offsetY * 0.1}px)`}}></div>
+      <div className="parallax_layer parallax Fog1" style={{ transform: `translateY(${offsetY * 0.5}px)`}}></div>
 
-      <div className="parallax_layer parallax secondRange" style={{ transform: `translateY(${offsetY * 0.15}px)`}}> </div>
+      {/* <div className="parallax_layer parallax Circle2" style={{ transform: `translateY(-${offsetY * 0.4}px)`}}> </div> */}
 
-      <div className="parallax_layer parallax finalRange" style={{ transform: `translateY(${offsetY * 0.2}px)`}}></div>
+      {/* <div className="parallax_layer parallax Circle1" style={{ transform: `translateY(-${offsetY * 0.6}px)`}}></div> */}
+
+      {/* <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.2}px)`}}></div> */}
 
     </div>
-    <div className="main_container">
+    <div className="main_container container">
       <div className="row">
           <div className="col">
               <h1>This is some words</h1>

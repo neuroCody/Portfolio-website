@@ -12,7 +12,7 @@ const inlinestyle = {
 
 function App() {
     return (
-      <div className="App" style={{ textAlign: 'center' }}>
+      <div className="App container" style={{ textAlign: 'center' }}>
         <Parallax bgImage="/assets/images/SiteBG1.jpg" bgImageAlt="first BG">
           <div style = {{height: 850}}>
             <div style={inlinestyle}> HTML inside the parallax</div>
