@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .parallax {
   position: relative;
@@ -23,22 +23,23 @@ position: absolute;
 }
 
 .Stars {
-  background-image: url(./bgStars.jpg);
+  background-image: linear-gradient(rgb(111, 97, 172), rgba(168, 68, 93, 0.993), rgba(194, 175, 6, 0.993));
 }
 
-.parallax_layer.Stars {
-  height: 1000px;
-  background-size: auto 1300px;
-  background-position: center bottom;
-}
+// .parallax_layer.Stars {
+//   height: 1000px;
+//   background-size: auto 1300px;
+//   background-position: center bottom;
+// }
 
 .Mtn1 {
-  background-image: url(./imgbin_mountain-polygon-euclidean-png.png);
+  background-image: url(./bgCloudMtn1.png);
 }
 
 .parallax_layer.Mtn1 {
-  background-size: auto 1000px;
+  background-size: auto 910px;
   background-position: bottom center;
+  margin-top: -170px;
 }
 
 .Fog1 {
@@ -48,38 +49,121 @@ position: absolute;
 .parallax_layer.Fog1 {
 
   opacity: 70%;
-  background-size: auto 2000px;
+  background-size: 2000px 700px;
   background-position: bottom center;
-  padding-top: 1000px;
   
 }
 
-// .Circle2 {
-//   background-image: url(./Circle2.png);
-// }
+.Mtn2 {
+  background-image: url(./bgCloudMtn2.png);
+}
 
-// .parallax_layer.Circle2 {
-//   background-size: auto 600px;
-//   background-position: bottom center; 
+.parallax_layer.Mtn2 {
+  background-size: auto 910px;
+  background-position: bottom center; 
+  margin-top: -65px;
+  
+  
 
-// }
+}
 
+.Fog2 {
+  background-image: url(./Fog1.png);
+}
 
+.parallax_layer.Fog2 {
 
-// .Circle1 {
-//   background-image: url(./Circle1.png);
-// }
+  opacity: 60%;
+  background-size: 2000px 500px;
+  background-position: bottom center;
+  
+}
 
-// .parallax_layer.Circle1 {
-//   background-size: auto 400px;
-//   background-position: bottom center;
-// }
+.Mtn3 {
+  background-image: url(./bgCloudMtn3.png);
+}
+
+.parallax_layer.Mtn3 {
+  background-size: auto 1000px;
+  background-position: bottom center; 
+  margin-top: -150px;
+
+}
+
+.Fog3 {
+  background-image: url(./Fog1.png);
+}
+
+.parallax_layer.Fog3 {
+
+  opacity: 60%;
+  background-size: 2000px 450px;
+  background-position: bottom center;
+
+  
+
+  
+}
+
+.Mtn4 {
+  background-image: url(./bgCloudMtn4.png);
+}
+
+.parallax_layer.Mtn4 {
+  background-size: auto 1000px;
+  background-position: bottom center;
+  margin-top: -150px;
+}
+
+.Title {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(247, 241, 241);
+  padding-top: 50px;
+  position: relative;
+
+}
+
+.hireBtn{
+  width:130px;
+  align-self: center;
+}
+
+.Fog4 {
+  background-image: url(./Fog1.png);
+}
+
+.parallax_layer.Fog4 {
+
+  opacity: 55%;
+  background-size: 2000px 600px;
+  background-position: bottom center;
+  margin-top: 200px;
+  
+}
+
+.treeline {
+  background-image: url(./Group1.png);
+}
+
+.parallax_layer.treeline{
+  background-size: auto 1000px;
+  background-position: bottom center;
+  margin-top: 500px;
+}
 
 .main_container {
   position: relative;
   z-index: 98;
   background-color: rgb(2, 0, 0);
+  background-size: cover;
+  color: white;
+  padding: 0px;
+  margin: 0px;
 }
+
 
 element.style {
   transform: translate3d(0px, 0px, 0px);
