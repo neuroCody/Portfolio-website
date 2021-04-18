@@ -1,71 +1,80 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col, Card, CardBody, Table} from 'reactstrap';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
-class About extends Component {
-
-    render() {
+const  About = () => {
+    useEffect(() => {
+        Aos.init({});
+    }, []);
+     
         return (
-            <div className="container">
-            <div className="row">
-                <div className="col-12 center-block text-center p-5">
-                    <h1>What is Projhex?</h1>
-                </div>
-            </div>
-            <div className="row row-content justify-content-center">
-                <div className="col col- align-self-center">
-                    <h3>Structured Creativity</h3>
-                    <p>Projhex is a dream of founder and creator, Cody Sullivan, that with enough support humanity can succeed together. Our way of contrbuting to this belief is providing a free and reliable service that allows creatives to relaize their dreams. With fewer setbacks and more opportinites to find like minded people.</p>
-                </div>
-                <div className="col-6">
-                    <img className="img-fluid d-none d-md-block" src="/assets/images/teamwork-sunset.jpg" alt="Teamwork Sunset" />
-                </div>
-            </div>
-            <div className="row row-content justify-content-center">
-                <div className="col-9">
-                    <Card className="bg-secondary">
-                        <CardBody className="blockquote text-light">
-                            <p className="mb-0">"Few people have any next, they live from hand to mouth without a plan, and are always at the end of their line."</p>
-                            <footer className="blockqoute-footer">-Ralph Waldo Emerson</footer>
-                        </CardBody>
-                    </Card>
-                </div>
-            </div>
-            <div className="row row-content justify-content-center">
-            <div className="col-6 center-block">
-                <h3>Company Overview</h3>
-                <div className="table-responsive">
-                    <Table className="table-dark">
-                        <thead className="thead-light">
-                            <tr>
-                                <th></th>
-                                <th>U.S.</th>
-                                <th>Global</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>Employees</th>
-                                <td>40</td>
-                                <td>35</td>
-                            </tr>
-                            <tr>
-                                <th>Creators</th>
-                                <td>12,345</td>
-                                <td>30,468</td>
-                            </tr>
-                            <tr>
-                                <th>Completed Projects</th>
-                                <td>2,047</td>
-                                <td>10,546</td>
-                            </tr>
-                        </tbody>
-                    </Table>
-                </div>
-            </div>
-        </div>
-        </div>
+            <Container 
+                id= "about"
+                style={{ 
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}>
+                <Card data-aos="fade-up" data-aos-delay= "400" 
+                    style={{ 
+                        backgroundColor: '#f4f4f2', 
+                        color: 'black', 
+                        marginBottom: '50px'
+                    }}>
+                    <CardBody>
+                        <Row>
+                            <Col md={12}>
+                                <h1 style={{
+                                    textAlign: "center",
+                                    textDecoration: "underline purple solid"
+                                    }}>About Me</h1>
+                            </Col>
+                            <Col lg={3}>
+                                <img 
+                                    src="/assets/images/myPic.png" 
+                                    style={{
+                                        height: '160px',
+                                        marginBottom: '10px',
+                                    }}
+                                    />
+                            </Col>
+                            <Col lg={3}
+                                style={{
+                                    alignSelf: "center",
+                                    borderRight: "1px solid black",
+                                    }}
+                            >
+                                <h5><strong style={{fontSize: 20}}>Name</strong>:</h5>
+                                <h6 style={{fontSize: 18}}>Cody Sullivan</h6>
+                                <h5><strong style={{fontSize: 20}}>Email</strong>:</h5>
+                                <h6 style={{fontSize: 18}}>sullivan.cody7@gmail.com</h6>
+                                <h5><strong>Phone</strong>:</h5>
+                                <h6 style={{fontSize: 18}}>(303) 859-6423</h6>
+                            </Col>
+                            <Col lg={6}
+                                style={{
+                                    alignSelf: "center",
+                                    marginRigt: '5px',
+                                }}
+                            >
+                                <p style={{
+                                    textAlign: "left",
+                                    fontSize: 17,
+                                    padding: 10}}> 
+                                    I am a self taught web developer who has over a decade of technical experience working 
+                                    in professional environments. My problem solving skill set and eye for details generated 
+                                    large revenue streams for previous employers in the real estate foreclosure space. 
+                                    I would now like to apply those abilities to software development.
+                                </p>
+                            </Col>
+                            
+                        </Row>
+                    </CardBody>
+                </Card>
+            </Container>
         )
-    }
+    
 }
 
 export default About;

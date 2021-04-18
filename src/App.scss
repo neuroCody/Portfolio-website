@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
 .parallax {
   position: relative;
   z-index: 10;
@@ -26,11 +30,6 @@ position: absolute;
   background-image: linear-gradient(rgb(111, 97, 172), rgba(168, 68, 93, 0.993), rgba(194, 175, 6, 0.993));
 }
 
-// .parallax_layer.Stars {
-//   height: 1000px;
-//   background-size: auto 1300px;
-//   background-position: center bottom;
-// }
 
 .Mtn1 {
   background-image: url(./bgCloudMtn1.png);
@@ -112,7 +111,7 @@ position: absolute;
 .parallax_layer.Mtn4 {
   background-size: auto 1000px;
   background-position: bottom center;
-  margin-top: -150px;
+  margin-top: -120px;
 }
 
 .Title {
@@ -127,8 +126,39 @@ position: absolute;
 }
 
 .hireBtn{
-  width:130px;
-  align-self: center;
+  width:120px;
+  border: 1px solid white;
+  color: white;
+  margin: 2px;
+}
+
+.hireBtn:hover{
+  background-color: rgba(140, 49, 168, 0.993);
+  border: rgba(140, 49, 168, 0.993);
+}
+
+.aboutBtn{
+  width:120px;
+  border: 1px solid white;
+  color: white;
+  margin: 2px;
+}
+
+.aboutBtn:hover{
+  background-color: rgba(140, 49, 168, 0.993);
+  border: rgba(140, 49, 168, 0.993);
+}
+
+.projectsBtn{
+  width:120px;
+  border: 1px solid white;
+  color: white;
+  margin: 2px;
+}
+
+.projectsBtn:hover{
+  background-color: rgba(140, 49, 168, 0.993);
+  border: rgba(140, 49, 168, 0.993);
 }
 
 .Fog4 {
@@ -145,25 +175,24 @@ position: absolute;
 }
 
 .treeline {
-  background-image: url(./Group1.png);
+  background-image: url(./Group2.png);
 }
 
 .parallax_layer.treeline{
   background-size: auto 1000px;
   background-position: bottom center;
-  margin-top: 500px;
+  margin-top: 450px;
 }
 
 .main_container {
   position: relative;
   z-index: 98;
-  background-color: rgb(2, 0, 0);
+  background-color: #222831;
   background-size: cover;
   color: white;
   padding: 0px;
   margin: 0px;
 }
-
 
 element.style {
   transform: translate3d(0px, 0px, 0px);
