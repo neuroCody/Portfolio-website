@@ -7,7 +7,7 @@ const  About = () => {
     useEffect(() => {
         Aos.init({});
     }, []);
-     
+    
         return (
             <Container 
                 id= "about"

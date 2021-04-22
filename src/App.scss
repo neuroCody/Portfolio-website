@@ -4,6 +4,10 @@
   font-family: 'Raleway', sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 .parallax {
   position: relative;
   z-index: 10;
@@ -11,6 +15,7 @@
   padding: 0;
   border: 0;
   vertical-align: top;
+  width: 100vw;
 }
 
 .parallax, .parallax_layer {
@@ -38,6 +43,7 @@ position: absolute;
 .parallax_layer.Mtn1 {
   background-size: auto 910px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   margin-top: -170px;
 }
 
@@ -50,6 +56,7 @@ position: absolute;
   opacity: 70%;
   background-size: 2000px 700px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   
 }
 
@@ -60,6 +67,7 @@ position: absolute;
 .parallax_layer.Mtn2 {
   background-size: auto 910px;
   background-position: bottom center; 
+  background-repeat: repeat-x;
   margin-top: -65px;
   
   
@@ -75,6 +83,7 @@ position: absolute;
   opacity: 60%;
   background-size: 2000px 500px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   
 }
 
@@ -85,6 +94,7 @@ position: absolute;
 .parallax_layer.Mtn3 {
   background-size: auto 1000px;
   background-position: bottom center; 
+  background-repeat: repeat-x;
   margin-top: -150px;
 
 }
@@ -98,6 +108,7 @@ position: absolute;
   opacity: 60%;
   background-size: 2000px 450px;
   background-position: bottom center;
+  background-repeat: repeat-x;
 
   
 
@@ -111,6 +122,7 @@ position: absolute;
 .parallax_layer.Mtn4 {
   background-size: auto 1000px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   margin-top: -120px;
 }
 
@@ -170,6 +182,7 @@ position: absolute;
   opacity: 55%;
   background-size: 2000px 600px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   margin-top: 200px;
   
 }
@@ -181,6 +194,7 @@ position: absolute;
 .parallax_layer.treeline{
   background-size: auto 1000px;
   background-position: bottom center;
+  background-repeat: repeat-x;
   margin-top: 450px;
 }
 

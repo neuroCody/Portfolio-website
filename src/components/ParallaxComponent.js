@@ -1,61 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import {Button, Row, Container } from 'reactstrap';
+import { Link } from 'react-scroll';
 
-const inlinestyle = {
-    background: '#fff',
-    left: '50%',
-    top: '50%',
-    position: 'absolute',
-    padding: '20px',
-    transform: 'translate(-50%, -50%)',
-  }
-  
+export default function Parallax() {
 
-function App() {
-    return (
-      <div className="App container" style={{ textAlign: 'center' }}>
-        <Parallax bgImage="/assets/images/SiteBG1.jpg" bgImageAlt="first BG">
-          <div style = {{height: 850}}>
-            <div style={inlinestyle}> HTML inside the parallax</div>
+
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  return (
+    <Container fluid='true'>
+      <div className="parallax">
+        <div className="parallax_layer parallax Stars" ></div>
+
+        <div className="parallax_layer parallax Mtn1" style={{ transform: `translateY(${offsetY * 0.5}px)` }}></div>
+
+        <div className="parallax_layer parallax Fog1" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
+
+        <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.53}px)`}}> </div>
+
+        <div className="parallax_layer parallax Fog2" style={{ transform: `translateY(-${offsetY * 0.28}px)`}}></div>
+
+        <div className="parallax_layer parallax Mtn3" style={{ transform: `translateY(${offsetY * 0.35}px)`}}> </div>
+
+        <div className="parallax_layer parallax Fog3" style={{ transform: `translateY(-${offsetY * 0.2}px)`}}></div>
+
+        <div className="parallax_layer parallax Mtn4" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
+
+        <div className="parallax_layer parallax Title d-flex" style={{ transform: `translateY(${offsetY * 0.7}px)`}}>
+          <h1>Cody Sullivan</h1>
+          <h2>Full Stack Web Developer</h2>
+          <Row style={{
+            style: 'flex',
+            justifyContent: 'center',
+          }}>
+          <div>
+          <Button outline className="btn-sm hireBtn">Hire Me!</Button>
           </div>
-        </Parallax>
-        <Parallax bgImage="/assets/images/SiteBG2.jpg" bgImageAlt="second BG" blur={{ min: -1, max: 3 }}>
-          <div style = {{height: 850}}>
-            <div style={inlinestyle}>Dynamic Blur</div>
+          <div>
+          <Button outline className="btn-sm aboutBtn">
+            <Link
+              activeClass= "active"
+              to= "about"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              About
+            </Link>
+          </Button>
           </div>
-        </Parallax>
-        <h1>| | |</h1>
-        <Parallax bgImage="/assets/images/bgStars.jpg" bgImageAlt="third BG" strength={-200}>
-          <div style = {{height: 850}}>
-            <div style={inlinestyle}>Reverse Direction</div>
+          <div>
+          <Button outline className="btn-sm projectsBtn">Projects</Button>
           </div>
-        </Parallax>
-        <h1>| | |</h1>
-        <Parallax 
-          bgImage="/assets/images/SiteBG1.jpg" 
-          bgImageAlt="third BG" 
-          strength={200}
-          renderLayer={percentage => (
-            <div 
-            style={{ 
-              width: '37%',
-              height: `590px`,
-              position: 'absolute',
-              backgroundImage: "url("+ Sun + ")",
-              backgroundColor: `rgba:(249, 223, 114, ${percentage * 9})`,
-              left: '50%',
-              top: '30%',
-              transform: `translate(-50%, -50%)`,
-             }}>
-             {console.log(percentage)}
-            </div>
-          )}
-        >
-          <div style = {{height: 850}}>
-            <div style={inlinestyle}>Render Prop</div>
-          </div>
-        </Parallax>
-        <div style={{height: '100vh' }}></div>
+          </Row>
+        </div>
+
+        <div className="parallax_layer parallax Fog4" style={{ transform: `translateY(-${offsetY * 1}px)`}}></div>
+
+        <div className="parallax_layer parallax treeline" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
+
+        {/* <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.2}px)`}}></div> */}
+
       </div>
-      
-    )
-  }
+    </Container>
+  )
+}
