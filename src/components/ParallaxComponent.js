@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Button, Row, Container } from 'reactstrap';
+import {Button, Row } from 'reactstrap';
 import { Link } from 'react-scroll';
 
 export default function Parallax() {
@@ -16,7 +16,7 @@ export default function Parallax() {
 
 
   return (
-    <Container fluid='true'>
+    <div>
       <div className="parallax">
         <div className="parallax_layer parallax Stars" ></div>
 
@@ -35,14 +35,25 @@ export default function Parallax() {
         <div className="parallax_layer parallax Mtn4" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
 
         <div className="parallax_layer parallax Title d-flex" style={{ transform: `translateY(${offsetY * 0.7}px)`}}>
-          <h1>Cody Sullivan</h1>
+        
+          <h1>Cody Sullivan</h1><br/>
           <h2>Full Stack Web Developer</h2>
           <Row style={{
             style: 'flex',
             justifyContent: 'center',
           }}>
           <div>
-          <Button outline className="btn-sm hireBtn">Hire Me!</Button>
+          <Button outline className="btn-sm hireBtn">
+          <Link
+              activeClass= "active"
+              to= 'hireMe'
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Hire Me!
+            </Link>
+          </Button>
           </div>
           <div>
           <Button outline className="btn-sm aboutBtn">
@@ -58,7 +69,17 @@ export default function Parallax() {
           </Button>
           </div>
           <div>
-          <Button outline className="btn-sm projectsBtn">Projects</Button>
+          <Button outline className="btn-sm projectsBtn">
+            <Link
+              activeClass= "active"
+              to= 'projects'
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Projects
+            </Link>
+            </Button>
           </div>
           </Row>
         </div>
@@ -67,9 +88,7 @@ export default function Parallax() {
 
         <div className="parallax_layer parallax treeline" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
 
-        {/* <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.2}px)`}}></div> */}
-
       </div>
-    </Container>
+    </div>
   )
 }

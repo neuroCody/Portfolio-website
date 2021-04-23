@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Container, Row, Col, Card, CardBody, Table} from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, Button } from 'reactstrap';
+import { Link } from 'react-scroll'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -27,7 +28,7 @@ const  About = () => {
                             <Col md={12}>
                                 <h1 style={{
                                     textAlign: "center",
-                                    textDecoration: "underline purple solid"
+                                    textDecoration: "underline rgb(168, 68, 93) solid"
                                     }}>About Me</h1>
                             </Col>
                             <Col lg={3}>
@@ -69,6 +70,40 @@ const  About = () => {
                                 </p>
                             </Col>
                             
+                        </Row>
+                        <Row
+                            style={{
+                                style: 'flex',
+                                justifyContent: 'center',
+                            }}
+                        >
+                            <div>
+                            <Button outline className="btn-sm hireBtn2">
+                                <Link
+                                    activeClass= "active"
+                                    to= 'hireMe'
+                                    spy={true}
+                                    smooth={true}
+                                    duration={1000}
+                                >
+                                    Hire Me!
+                                </Link>
+                            </Button>
+                            </div>
+                            <div>
+                            <Button outline className="btn-sm projectsBtn2">
+                                <Link
+                                    activeClass= "active"
+                                    to= 'projects'
+                                    spy={true}
+                                    smooth={true}
+                                    duration={1000}
+                                >
+                                Projects
+                                </Link>
+                            </Button>
+
+                            </div>
                         </Row>
                     </CardBody>
                 </Card>

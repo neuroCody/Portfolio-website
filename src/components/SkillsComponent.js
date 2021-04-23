@@ -30,7 +30,7 @@ const Skills = () => {
                                 <Col>
                                     <h2 style={{
                                             textAlign: "center",
-                                            textDecoration: "underline purple solid",
+                                            textDecoration: "underline rgb(168, 68, 93) solid",
                                             marginBottom: 40}}
                                     >Programming Skills
                                     </h2>

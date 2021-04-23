@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, CardBody, CardHeader, Button, UncontrolledCollapse } from 'reactstrap';
+import React, { useEffect } from 'react';
+import { Row, Col, Card, CardBody, CardHeader, Button, UncontrolledCollapse } from 'reactstrap';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
 const Portfolio = () => {
 
+    useEffect(() => {
+        Aos.init({});
+    }, []);
 
     return(
         <div
             style={{
-                backgroundColor: '#94A1EE', 
+                backgroundColor: '#eeebdd', 
                 paddingTop: 30,
                 paddingBottom: 30,
-                width: '100vw'
+                width: '100%'
             }}
         >
             <div
-                    style={{
-                        textAlign: 'center',
-                        margin: 40,
-                    }}
-                >
+                id='projects'
+                style={{
+                    textAlign: 'center',
+                    margin: 40,
+                }}
+            >
                     <h1 style={{ 
                     color: 'black',
                     fontSize: 75, 
@@ -33,47 +37,43 @@ const Portfolio = () => {
                     
             </div>
             <div className='d-none d-lg-block'>
-                <div
-                    
-                    style={{
-                        marginBottom: '15%',
-                    }}
-                >
-                    
+                <div className='ProjectCard'>
                     <div
                         className="d-none d-md-block"
                         style={{
-                            display:'flex',
-                            flexDirection: 'row',
-                            paddingLeft : "10%",
+                            paddingRight : "17%",
 
                         }}
                     >
                     
-                        {/* <img 
+                        <img 
                         className='img-fluid'
                         src='/assets/images/Projhex-Home.png'
                         style={{
                             position: 'relative',
                             height: 700,
                             width: 'auto',
-                            border: '3px solid purple',
+                            
                             borderRadius: 5,
                             boxShadow: '5px 3px 10px black'
                             
                         }}
                         
-                        /> */}
+                        />
                     </div>
-                    
-                    {/* <Card
-                        // data-aos="fade-left" data-aos-delay= "400" 
+                    <Row 
+                    style={{
+                        marginBottom: '13%'
+                    }}
+                    ></Row>
+                    <Card
+                        data-aos="fade-left" data-aos-delay= "500" 
                         style={{ 
-                            backgroundColor: '#797C9A',
+                            backgroundColor: 'rgba(0, 0, 0, .9)',
                             position: 'absolute',
                             marginLeft: '53%',
                             marginTop: '11%',
-                            height: 600,
+                            height: 300,
                             width: 500,
                             zIndex: 100,
                             
@@ -95,25 +95,27 @@ const Portfolio = () => {
                             
                             <h3>Description:</h3>
                             <p>Landing page site advertising a project tracking service. Features a single page React application that is fully responsive for all viewport sizes, with authentication required for input fields.</p>
+                            <h5>Links:</h5>
+                                <a className="btn btn-lg" href="#" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/React-Nucampsite.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
                         </CardBody>
-                    </Card> */}
+                    </Card>
                     
                 </div>
-                {/* <Row
-                    style={{
-                        marginBottom: '15%',
-                        display: 'flex',
-                        flexDirection: 'row-reverse'
-                    }}
-                >
+                <div className='ProjectCard'>
                     
                     <div
                         className="d-none d-md-block"
                         style={{
-                            display:'flex',
-                            flexDirection: 'row',
-                            paddingRight : "10%",
-
+                            paddingLeft : "18%",
                         }}
                     >
                     
@@ -124,7 +126,6 @@ const Portfolio = () => {
                             position: 'relative',
                             height: 700,
                             width: 'auto',
-                            border: '3px solid purple',
                             borderRadius: 5,
                             boxShadow: '5px 3px 10px black'
                             
@@ -132,10 +133,14 @@ const Portfolio = () => {
                         
                         />
                     </div>
-                    
+                    <Row 
+                    style={{
+                        marginBottom: '13%'
+                    }}
+                    ></Row>
                     <Card data-aos="fade-right" data-aos-delay= "400" 
                         style={{ 
-                            backgroundColor: '#797C9A',
+                            backgroundColor: 'rgba(0, 0, 0, .9)',
                             position: 'absolute',
                             marginRight: '53%',
                             marginTop: '11%',
@@ -168,7 +173,7 @@ const Portfolio = () => {
                                 }}>
                                     </i>
                                 </a>
-                                <a className="btn btn-lg" href="https://github.com/neuroCody" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/React-Nucampsite.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
                                     color: 'white', 
                                 }}>
                                     </i>
@@ -176,20 +181,13 @@ const Portfolio = () => {
                             </div>
                         </CardBody>
                     </Card>
-                </Row>
-                <Row 
-                    style={{
-                        marginBottom: '13%'
-                    }}
-                >
+                </div>
+                <div className='ProjectCard'>
                     
                     <div
                         className="d-none d-md-block"
                         style={{
-                            display:'flex',
-                            flexDirection: 'row',
-                            paddingLeft : "10%",
-
+                            paddingRight : "10%",
                         }}
                     >
                     
@@ -200,7 +198,6 @@ const Portfolio = () => {
                             position: 'relative',
                             height: 800,
                             width: 'auto',
-                            border: '3px solid rgb(207, 19, 107)',
                             borderRadius: 5,
                             boxShadow: '5px 3px 10px black'
                             
@@ -211,14 +208,13 @@ const Portfolio = () => {
                     
                     <Card data-aos="fade-left" data-aos-delay= "400" 
                         style={{ 
-                            backgroundColor: '#797C9A',
+                            backgroundColor: 'rgba(0, 0, 0, .9)',
                             position: 'absolute',
                             marginLeft: '53%',
                             marginTop: '11%',
                             height: 300,
                             width: 500,
                             zIndex: 100,
-                            
                             boxShadow:'5px 5px 20px black'
                         }}
                     >
@@ -237,11 +233,24 @@ const Portfolio = () => {
                             
                             <h3>Description:</h3>
                             <p>Small business website for a donut shop. Created using fundamental HTML/CSS principles and a heavy focus on flex-box design. </p>
+                            <div>
+                                <h5>Links:</h5>
+                                <a className="btn btn-lg" href="https://lordofdonuts.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/Imperial-Donuts.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                            </div>
                         </CardBody>
                     </Card>
-                </Row> */}
+                </div>
             </div>
-            <Row>
+            <Row style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <Col>
             <div className='d-block d-lg-none'>
                 <Button color="primary" id='Projhex' style={{ marginBottom: '1rem' }}>Projhex</Button>
