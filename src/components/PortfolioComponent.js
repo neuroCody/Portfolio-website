@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Row, Col, Card, CardBody, CardHeader, Button, UncontrolledCollapse } from 'reactstrap';
+import { Link } from 'react-scroll';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -10,8 +11,9 @@ const Portfolio = () => {
     }, []);
 
     return(
-        <div
-            style={{
+        <div 
+                id= "projects"
+                style={{
                 backgroundColor: '#eeebdd', 
                 paddingTop: 30,
                 paddingBottom: 30,
@@ -19,15 +21,13 @@ const Portfolio = () => {
             }}
         >
             <div
-                id='projects'
                 style={{
                     textAlign: 'center',
-                    margin: 40,
                 }}
             >
                     <h1 style={{ 
                     color: 'black',
-                    fontSize: 75, 
+                    fontSize: '4rem', 
                     padding: 30
                     }}>
                     <strong>
@@ -58,12 +58,12 @@ const Portfolio = () => {
                             boxShadow: '5px 3px 10px black'
                             
                         }}
-                        
+                        alt='Projhex Site'
                         />
                     </div>
                     <Row 
                     style={{
-                        marginBottom: '13%'
+                        marginBottom: '10%'
                     }}
                     ></Row>
                     <Card
@@ -82,7 +82,8 @@ const Portfolio = () => {
                     >
                         <CardHeader
                             style={{
-                                color: '#f4f4f2'
+                                color: '#f4f4f2',
+                                fontSize: '25px'
                             }}
                         >
                             Projhex - Project Tracker
@@ -93,15 +94,15 @@ const Portfolio = () => {
                             }}
                         >
                             
-                            <h3>Description:</h3>
+                            <h5>Description:</h5>
                             <p>Landing page site advertising a project tracking service. Features a single page React application that is fully responsive for all viewport sizes, with authentication required for input fields.</p>
                             <h5>Links:</h5>
-                                <a className="btn btn-lg" href="#" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                <a className="btn btn-lg" href="https://projhex.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
                                     color: 'white', 
                                 }}>
                                     </i>
                                 </a>
-                                <a className="btn btn-lg" href="https://github.com/neuroCody/React-Nucampsite.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/Projhex-React-Site" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
                                     color: 'white', 
                                 }}>
                                     </i>
@@ -121,7 +122,7 @@ const Portfolio = () => {
                     
                         <img 
                         className='img-fluid'
-                        src='/assets/images/Nucamp-Home.png'
+                        src='/assets/images/taskTracker.png'
                         style={{
                             position: 'relative',
                             height: 700,
@@ -130,12 +131,12 @@ const Portfolio = () => {
                             boxShadow: '5px 3px 10px black'
                             
                         }}
-                        
+                        alt='Nucamp Site'
                         />
                     </div>
                     <Row 
                     style={{
-                        marginBottom: '13%'
+                        marginBottom: '10%'
                     }}
                     ></Row>
                     <Card data-aos="fade-right" data-aos-delay= "400" 
@@ -144,7 +145,7 @@ const Portfolio = () => {
                             position: 'absolute',
                             marginRight: '53%',
                             marginTop: '11%',
-                            height: 310,
+                            height: 280,
                             width: 500,
                             zIndex: 100,
                             
@@ -153,10 +154,11 @@ const Portfolio = () => {
                     >
                         <CardHeader
                             style={{
-                                color: '#f4f4f2'
+                                color: '#f4f4f2',
+                                fontSize: '25px'
                             }}
                         >
-                            Nucamp
+                            Todone
                         </CardHeader>
                         <CardBody
                             style={{
@@ -164,16 +166,16 @@ const Portfolio = () => {
                             }}
                         >
                             
-                            <h3>Description:</h3>
-                            <p>Website for reviewing fictional campsites. Built as a single page React/Redux application. Utylizes a JSON server to allow comments to be updated and stored to memory.</p>
+                            <h5>Description:</h5>
+                            <p>Task tracker application built in React. Includes functionality to create, delete and set status for Task reminders.</p>
                             <div>
                                 <h5>Links:</h5>
-                                <a className="btn btn-lg" href="https://nucampreviews.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                <a className="btn btn-lg" href="https://urtodone.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
                                     color: 'white', 
                                 }}>
                                     </i>
                                 </a>
-                                <a className="btn btn-lg" href="https://github.com/neuroCody/React-Nucampsite.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/react-task-tracker.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
                                     color: 'white', 
                                 }}>
                                     </i>
@@ -202,7 +204,7 @@ const Portfolio = () => {
                             boxShadow: '5px 3px 10px black'
                             
                         }}
-                        
+                        alt='Imperial Donuts Site'
                         />
                     </div>
                     
@@ -220,7 +222,8 @@ const Portfolio = () => {
                     >
                         <CardHeader
                             style={{
-                                color: '#f4f4f2'
+                                color: '#f4f4f2',
+                                fontSize: '25px'
                             }}
                         >
                             Imperial Donuts
@@ -231,7 +234,7 @@ const Portfolio = () => {
                             }}
                         >
                             
-                            <h3>Description:</h3>
+                            <h5>Description:</h5>
                             <p>Small business website for a donut shop. Created using fundamental HTML/CSS principles and a heavy focus on flex-box design. </p>
                             <div>
                                 <h5>Links:</h5>
@@ -248,12 +251,20 @@ const Portfolio = () => {
                             </div>
                         </CardBody>
                     </Card>
+                    <Row 
+                    style={{
+                        marginBottom: '5%'
+                    }}
+                    ></Row>
                 </div>
             </div>
-            <Row style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Row >
             <Col>
-            <div className='d-block d-lg-none'>
-                <Button color="primary" id='Projhex' style={{ marginBottom: '1rem' }}>Projhex</Button>
+            <div className='d-block d-lg-none'
+            >
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <Button color="primary" id='Projhex' style={{ marginBottom: '1rem' }}>Projhex</Button>
+                </div>
                 <UncontrolledCollapse toggler='Projhex'>
                     <Card
                     style={{ 
@@ -274,16 +285,29 @@ const Portfolio = () => {
                     >
                     Landing page site advertising a project tracking service. Features a single page React application 
                     that is fully responsive for all viewport sizes, with authentication required for input fields.
+                    <h5>Links:</h5>
+                                <a className="btn btn-lg" href="https://projhex.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/Projhex-React-Site" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
                     </CardBody>
                     </Card>
                 </UncontrolledCollapse>
             </div>
             </Col>
             </Row>
-            <Row style={{ display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <Row >
             <Col>
-            <div className='d-block d-lg-none'>
-                    <Button color="primary" id='Nucamp' style={{marginLeft: '50%'}}>Nucamp</Button>
+            <div className='d-block d-lg-none' >
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <Button color="primary" id='Nucamp' style={{marginBottom: '1rem', marginTop: '1rem'}}>ToDone</Button>
+                </div>
                 <UncontrolledCollapse toggler='Nucamp'>
                     <Card
                     style={{ 
@@ -295,21 +319,86 @@ const Portfolio = () => {
                             color: '#f4f4f2'
                         }}
                     >
-                        <h1> Projhex - Project Tracker</h1>
+                        <h1> ToDone - Task Tracker</h1>
                     </CardHeader>
                     <CardBody
                         style={{
                             color: '#f4f4f2'
                         }}
                     >
-                    Landing page site advertising a project tracking service. Features a single page React application 
-                    that is fully responsive for all viewport sizes, with authentication required for input fields.
+                    Task tracker application built in React. Includes functionality to create, delete and set status for Task reminders.
+                    <h5>Links:</h5>
+                                <a className="btn btn-lg" href="https://urtodone.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/react-task-tracker.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
                     </CardBody>
                     </Card>
                 </UncontrolledCollapse>
             </div>
             </Col>
             </Row>
+            <Row >
+            <Col>
+            <div className='d-block d-lg-none' >
+                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    <Button color="primary" id='Imperial' style={{marginBottom: '1rem', marginTop: '1rem'}}>Imperial Donuts</Button>
+                </div>
+                <UncontrolledCollapse toggler='Imperial'>
+                    <Card
+                    style={{ 
+                        backgroundColor: '#797C9A',
+                    }}
+                    >
+                    <CardHeader
+                        style={{
+                            color: '#f4f4f2'
+                        }}
+                    >
+                        <h1> Imperial Donuts</h1>
+                    </CardHeader>
+                    <CardBody
+                        style={{
+                            color: '#f4f4f2'
+                        }}
+                    >
+                    Small business website for a donut shop. Created using fundamental HTML/CSS principles and a heavy focus on flex-box design.
+                    <h5>Links:</h5>
+                                <a className="btn btn-lg" href="https://lordofdonuts.netlify.app/" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-desktop" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                                <a className="btn btn-lg" href="https://github.com/neuroCody/Imperial-Donuts.git" target="_blank" rel="noreferrer noopener noopen"><i className="fa fa-github" style={{
+                                    color: 'white', 
+                                }}>
+                                    </i>
+                                </a>
+                    </CardBody>
+                    </Card>
+                </UncontrolledCollapse>
+            </div>
+            </Col>
+            </Row>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Button outline className="btn-sm topBtn">
+                <Link
+                    activeClass= "active"
+                    to= 'top'
+                    spy={true}
+                    smooth={true}
+                    duration={1200}
+                    >
+                To Top
+                </Link>
+            </Button>
+                </div>
         </div>
     )
 }

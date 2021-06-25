@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Button, Row } from 'reactstrap';
+import { Button, Row } from 'reactstrap';
 import { Link } from 'react-scroll';
 
 export default function Parallax() {
@@ -17,27 +17,27 @@ export default function Parallax() {
 
   return (
     <div>
-      <div className="parallax">
+      <div className="parallax" id="top">
         <div className="parallax_layer parallax Stars" ></div>
 
         <div className="parallax_layer parallax Mtn1" style={{ transform: `translateY(${offsetY * 0.5}px)` }}></div>
 
         <div className="parallax_layer parallax Fog1" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
 
-        <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.53}px)`}}> </div>
+        <div className="parallax_layer parallax Mtn2" style={{ transform: `translateY(${offsetY * 0.4}px)`}}> </div>
 
-        <div className="parallax_layer parallax Fog2" style={{ transform: `translateY(-${offsetY * 0.28}px)`}}></div>
+        <div className="parallax_layer parallax Fog2" style={{ transform: `translateY(-${offsetY * 0.25}px)`}}></div>
 
         <div className="parallax_layer parallax Mtn3" style={{ transform: `translateY(${offsetY * 0.35}px)`}}> </div>
 
         <div className="parallax_layer parallax Fog3" style={{ transform: `translateY(-${offsetY * 0.2}px)`}}></div>
 
-        <div className="parallax_layer parallax Mtn4" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
+        <div className="parallax_layer parallax Mtn4" style={{ transform: `translateY(${offsetY * 0.1}px)`}}></div>
 
         <div className="parallax_layer parallax Title d-flex" style={{ transform: `translateY(${offsetY * 0.7}px)`}}>
         
           <h1>Cody Sullivan</h1><br/>
-          <h2>Full Stack Web Developer</h2>
+          <h5 className='profession'>Front End Web Developer</h5>
           <Row style={{
             style: 'flex',
             justifyContent: 'center',
@@ -49,7 +49,7 @@ export default function Parallax() {
               to= 'hireMe'
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={1200}
             >
               Hire Me!
             </Link>
@@ -62,7 +62,7 @@ export default function Parallax() {
               to= "about"
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={1200}
             >
               About
             </Link>
@@ -75,7 +75,7 @@ export default function Parallax() {
               to= 'projects'
               spy={true}
               smooth={true}
-              duration={1000}
+              duration={1400}
             >
               Projects
             </Link>
@@ -86,7 +86,7 @@ export default function Parallax() {
 
         <div className="parallax_layer parallax Fog4" style={{ transform: `translateY(-${offsetY * 1}px)`}}></div>
 
-        <div className="parallax_layer parallax treeline" style={{ transform: `translateY(-${offsetY * 0.3}px)`}}></div>
+        <div className="parallax_layer parallax treeline" style={{ transform: `translateY(-${offsetY * 0.2}px)`}}></div>
 
       </div>
     </div>
